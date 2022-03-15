@@ -1,0 +1,51 @@
+#start django...
+
+#install django
+pip3 install django
+
+django-admin  # show the main command. it is a CLI = command line interface
+
+django-admin startproject <pro-name> # start a pro at current dir ----startproject is a subcommand for django-admin
+
+<manage.py> is a heart of django pro
+
+
+'wsgi.py' and 'asgi.py' file uses to deploy files 
+
+the 'settings.py'  is global setting about pro
+
+
+python manage.py   #run manage.py 
+./manage.py  #show subcommands 
+
+#install django at virtual env
+
+localhost=127.0.0.1
+
+./manage.py startapp <app_name>#make an app named app_name by subcommand startapp at django file at current dir
+
+add <started_app_name> to INSTALLED_APP at settings of main file.
+
+form django.urls import path
+from django.http import HttpResponse
+from django.urls import include # to include an url at an app to urls at main urls.py 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
