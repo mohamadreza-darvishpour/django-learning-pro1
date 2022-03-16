@@ -28,9 +28,11 @@ add <started_app_name> to INSTALLED_APP at settings of main file.
 
 form django.urls import path
 from django.http import HttpResponse
-from django.urls import include # to include an url at an app to urls at main urls.py 
+from django.urls import include # to include an url in an app to urls in the main urls.py 
 
+placeholder: #make variable at jango by <>  .e.g  '<variables>' in the string yet use in path. and return it to function.
 
+from django.http import HttpResponseNotFound
 
 
 
