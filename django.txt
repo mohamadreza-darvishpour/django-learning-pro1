@@ -34,8 +34,15 @@ placeholder: #make variable at jango by <>  .e.g  '<variables>' in the string ye
 
 from django.http import HttpResponseNotFound
 
+#command at placeholder
+path("<int:variable>",...) or path("<str:variable>",...) #order by the way that <str:vari>
+if it is possible to change <variable> type to int or str or anyother order it changes to.
 
 
+302....#status code 300,302,... are especially used as redirections events.
+
+from http import HttpResponseRedirect
+HttpResponseRedirect("newurl")#it resend the page to "newurl"
 
 
 
