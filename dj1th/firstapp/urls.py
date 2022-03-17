@@ -8,5 +8,7 @@ urlpatterns=[
 #    path("saturday",views.sat),
     
     #path("test:<tx>",views.test)   #use place holder
-    path("<tx2>",views.test2),
+
+    path("<int:tx2>",views.test2),
+    path("<str:tx2>",views.test3),
 ] 

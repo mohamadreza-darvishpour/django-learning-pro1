@@ -15,14 +15,37 @@ def test(request,tx):
     return HttpResponse("hello dear. remember %s..."%tx)
 '''
 #make dynamic url by dict and place holder
-days={'wed':"this is sat",
-'thurs':"thurs is thurs",
-'fri':"this is fri",
+days={
+    'sat':"this is sat",
+    'sun':"this is sun",
+    'mon':"this is mon",
+    'tue':"this is tue",
+    'wed':"this is wed",
+    'thu':"this is thu",
+    'fri':"this is fri",
 }
+
+days_by_num=list(days.keys())  #make a list of weekdays.
+
 #important to import httpresponsenotfou..
 from django.http import HttpResponseNotFound
+from django.http import HttpResponseRedirect
+
+
 def test2(request,tx2):
-    data1=days.get(f'{tx2}')
-    if data1==None:
-        return HttpResponseNotFound("page has not been founded! try again.")
-    return HttpResponse(f'day:{tx2}  data:{data1}')
+    if int(tx2)<len(days_by_num )  or int(tx2)>len(days_by_num):
+        print("test2.one")
+        return HttpResponse(f'days {tx2} not found')
+    else:
+        print("test2.two")
+        return HttpResponseRedirect(f'{days_by_num[int(tx2-1)]}')
+
+
+def test3(request,tx2):
+    if tx2 in days.keys():
+        print("test3.three")
+        return HttpResponse(f'{tx2}->day   {days[tx2]}->data')
+    else:
+        print("test3.four")
+        return HttpResponseNotFound(f'{tx2} is not a weekdays')
+
