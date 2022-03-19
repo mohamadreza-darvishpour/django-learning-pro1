@@ -47,5 +47,19 @@ def test3(request,tx2):
         return HttpResponse(f'{tx2}->day   {days[tx2]}->data')
     else:
         print("test3.four")
-        return HttpResponseNotFound(f'{tx2} is not a weekdays')
+        return HttpResponseNotFound(f'{tx2} is not a weekdays but has been seen here.')
 
+
+#use reverse and args.
+from django.urls import reverse
+
+def test4(request,tx4):
+    print("*"*8)
+    r_u_one = reverse('the-day',args=[tx4])   #args has should been be in list.
+    return HttpResponseRedirect(r_u_one)
+
+
+def test5(request,tx5):
+    re_url=reverse('the-day',args=[tx5])
+    print('##'*8)
+    return HttpResponseRedirect(re_url)

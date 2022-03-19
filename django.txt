@@ -44,8 +44,16 @@ if it is possible to change <variable> type to int or str or anyother order it c
 from http import HttpResponseRedirect
 HttpResponseRedirect("newurl")#it resend the page to "newurl"
 
-
-
+#use reverse
+from django.urls import reverse  #it get a name and reverse or make a url by that.
+but you should use the name at urls.py at urlpattern at path    .e.g
+path('path_url<var1><var2>..',views...., name="path_name") #it take a name to path and has been used in place of 'path_url'
+#how to use reverse???
+from django.urls import reverse 
+path_vari = reverse('name of the path .e.g path_name',args=[var1,var2])
+#path name was an entered name at urls.py at path and their variables(args) at path must be in the list 
+and then we have a full url of made application at path_vari
+#then we can use it by:'{path_vari}' at string.
 
 
 
