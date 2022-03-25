@@ -33,7 +33,7 @@ from django.http import HttpResponseRedirect
 
 
 def test2(request,tx2):
-    if int(tx2)<len(days_by_num )  or int(tx2)>len(days_by_num):
+    if int(tx2)<1  or int(tx2)>len(days_by_num):
         print("test2.one")
         return HttpResponse(f'days {tx2} not found')
     else:
@@ -44,12 +44,33 @@ def test2(request,tx2):
 def test3(request,tx2):
     if tx2 in days.keys():
         print("test3.three")
-        return HttpResponse(f'{tx2}->day   {days[tx2]}->data')
+        reply_mes=f'<h3>{tx2}->day   {days[tx2]}->data</h3>'
+        return HttpResponse(reply_mes)
     else:
         print("test3.four")
         return HttpResponseNotFound(f'{tx2} is not a weekdays but has been seen here.')
 
+#use html code at response
+def html_page(request,tx6):
+    html_part = f'<h3> {tx6} will come after mame.joon</h3>'
+    return HttpResponse(html_part)
 
+from django.urls import reverse
+def empty_page(request):
+    data_html=''
+    days_list = list(days.keys())
+    for d_day in days_list:
+        address = reverse('the-day',args=[d_day])
+        data_html +=f'''
+                    <li>
+                        <a href="{address}">{d_day}</a>
+                    </li>
+                    '''
+    return HttpResponse(data_html)
+
+
+
+'''
 #use reverse and args.
 from django.urls import reverse
 
@@ -63,3 +84,5 @@ def test5(request,tx5):
     re_url=reverse('the-day',args=[tx5])
     print('##'*8)
     return HttpResponseRedirect(re_url)
+'''
+

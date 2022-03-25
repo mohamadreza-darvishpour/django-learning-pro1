@@ -68,6 +68,7 @@ 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
 
 
 
-
+#to use html tags at views....
+our_reply = f'<html-tag> messages...</html-tag>'  #it run html tag at browser.
 
 
