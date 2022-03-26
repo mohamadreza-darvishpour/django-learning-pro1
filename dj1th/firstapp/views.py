@@ -90,6 +90,10 @@ def test5(request,tx5):
 
 #use templates at django
 from django.template.loader import render_to_string
-def cheer_html(request ):
-    cheer = render_to_string('firstapp/cheers.html')
-    return HttpResponse(cheer)
+def cheer_html(request,tx7 ):
+#    cheer = render_to_string('firstapp/cheers.html')
+#    return HttpResponse(cheer)
+    day_data={
+        'weekdays':'+'.join(days.keys())
+              }
+    return render(request,'firstapp/cheers.html',day_data)

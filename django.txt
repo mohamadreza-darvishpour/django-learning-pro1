@@ -89,10 +89,28 @@ from django.template.loader import render_to_string  #it changes html templates 
 our_html_string = render_to_string( 'app_name_folder/html1.html') #render html1.html to string 
 then
 return HttpResponse(our_html_string)  #clearly done after good pathing at urls.py.
+or.....
+from django.shourtcuts  import render   
+return render(request,'app_name_folder/html1.html')  #it directly make it string at return it 
 
-
+  
 
 we can use complete address at settings.py at TEMPLATES at 'dir':"our_path" and we don't sign our app 
 to INSTALLED_APP   
+
+
+if you made a variable at urls.py you must sign it at the views.py
+
+DTL = django templates language      #merge django syntax and html syntax
+#use dtl to update files
+at views.py you need render
+we can send informations by the dictionary at views by render.
+dict={'key1':'data1',...} s
+we can send it by render
+render(request,'html-file-path.html',context)
+render(request,'html-file-path.html',dict) it send informations at dictionary type just in dictionary and the keys is usable at htmlfile
+then go to htmlfile and read the data at dict by {{key1}} and it sends the 'data1' at html file
+<span>{{key1}} </span>   
+#***notice: we use the key to send the values.
 
 
