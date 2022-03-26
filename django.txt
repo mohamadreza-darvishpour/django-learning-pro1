@@ -46,7 +46,7 @@ HttpResponseRedirect("newurl")#it resend the page to "newurl"
 
 #use reverse
 from django.urls import reverse  #it get a name and reverse or make a url by that.
-but you should use the name at urls.py at urlpattern at path    .e.g
+but you should use the name at urls.py at urlpatterns at path    .e.g
 path('path_url<var1><var2>..',views...., name="path_name") #it take a name to path and has been used in place of 'path_url'
 #how to use reverse???
 from django.urls import reverse 
@@ -70,5 +70,29 @@ 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
 
 #to use html tags at views....
 our_reply = f'<html-tag> messages...</html-tag>'  #it run html tag at browser.
+and send our_reply by HttpResponse(our_reply)
+
+
+#work with templates   *********
+make a file named 'templates' and make another at that named our application name so ...
+our-app/templates/our-app/
+then make html-file at that path.
+
+
+
+#use templates
+first make a dir at app_name_folder
+app_name_folder/templates/app_name_folder
+then we make html template at that folder: app_name_folder/templates/app_name_folder
+after that go to views and --> 
+from django.template.loader import render_to_string  #it changes html templates or file at app_name_folder to string at the path gien.
+our_html_string = render_to_string( 'app_name_folder/html1.html') #render html1.html to string 
+then
+return HttpResponse(our_html_string)  #clearly done after good pathing at urls.py.
+
+
+
+we can use complete address at settings.py at TEMPLATES at 'dir':"our_path" and we don't sign our app 
+to INSTALLED_APP   
 
 

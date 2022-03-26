@@ -65,6 +65,7 @@ def empty_page(request):
                     <li>
                         <a href="{address}">{d_day}</a>
                     </li>
+                
                     '''
     return HttpResponse(data_html)
 
@@ -86,3 +87,9 @@ def test5(request,tx5):
     return HttpResponseRedirect(re_url)
 '''
 
+
+#use templates at django
+from django.template.loader import render_to_string
+def cheer_html(request ):
+    cheer = render_to_string('firstapp/cheers.html')
+    return HttpResponse(cheer)
