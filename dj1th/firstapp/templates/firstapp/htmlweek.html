@@ -11,7 +11,7 @@
  
     {% for item in week %}
         <span>
-             <a href="/days/{{item}}">it's {{item}}</a>
+       <a href= {%url 'the-day'  item  %}>    it's {{item}} </a>
         </span>
         <div>_____</div>
 

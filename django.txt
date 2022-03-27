@@ -120,3 +120,16 @@ you can form your built in filter function.
 
 
 #template tags
+uses in template html files
+{% python command .. %}   #is used to command python in htmlfiles
+..html commands.....
+{% end python command %}
+
+
+
+#search about different template tags  .e.g   url template tag
+{% url "url's name"    variable_value1 va...2  v..3 ...%}  #we can use url command to make link between urls 
+or 
+{% url "url's name"    variable1=value1 va.2=...2  v..3=..3 ...%}  send values to variables needed.  
+***it makes complete url not a complete link and you haven't to close this tag.
+
