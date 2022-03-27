@@ -56,11 +56,6 @@ and then we have a full url of made application at path_vari
 #then we can use it by:'{path_vari}' at string.
 
 
-20 march  github token.***********************************
-                       ***********************************
-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
-
-
 
 
 
@@ -113,4 +108,11 @@ then go to htmlfile and read the data at dict by {{key1}} and it sends the 'data
 <span>{{key1}} </span>   
 #***notice: we use the key to send the values.
 
+
+
+#django template filter     search and found different built in filter
+built in filter has been used by ' | ' after html dtl
+.e.g     
+<span>   it is the time{{ time | add 3}}   </span>
+just showing variable has been changed not a main vari.
 

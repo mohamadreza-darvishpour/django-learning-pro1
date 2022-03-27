@@ -93,7 +93,7 @@ from django.template.loader import render_to_string
 def cheer_html(request,tx7 ):
 #    cheer = render_to_string('firstapp/cheers.html')
 #    return HttpResponse(cheer)
-    day_data={
-        'weekdays':'+'.join(days.keys())
-              }
-    return render(request,'firstapp/cheers.html',day_data)
+    day_dict= {
+        "daydata":'**'.join(days.keys())
+    }
+    return render(request,'firstapp/cheers.html',day_dict)
