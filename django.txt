@@ -116,3 +116,7 @@ built in filter has been used by ' | ' after html dtl
 <span>   it is the time{{ time | add 3}}   </span>
 just showing variable has been changed not a main vari.
 
+you can form your built in filter function.
+
+
+#template tags

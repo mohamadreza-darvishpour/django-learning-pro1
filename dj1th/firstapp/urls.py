@@ -10,6 +10,7 @@ urlpatterns=[
     #path("test:<tx>",views.test)   #use place holder
     #path("33<str:tx5>",views.test5),
     #path("22<str:tx4>",views.test4),
+    path("htmlweek<tx8>",views.html_week),
     path("cheer<tx7>",views.cheer_html),
     path("",views.empty_page),
     path("mame<str:tx6>",views.html_page),

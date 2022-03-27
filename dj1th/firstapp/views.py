@@ -97,3 +97,12 @@ def cheer_html(request,tx7 ):
         "daydata":'**'.join(days.keys())
     }
     return render(request,'firstapp/cheers.html',day_dict)
+
+
+#use template tags
+def html_week(request,tx8):
+    week_list = list(days.keys())
+    datasofweek={
+        'week':week_list,
+    }
+    return render(request,'firstapp/htmlweek.html',datasofweek)
