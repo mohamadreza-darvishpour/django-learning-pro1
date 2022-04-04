@@ -133,3 +133,35 @@ or
 {% url "url's name"    variable1=value1 va.2=...2  v..3=..3 ...%}  send values to variables needed.  
 ***it makes complete url not a complete link and you haven't to close this tag.
 
+#{% if condition1 %}
+    do 1
+ {%elif condition2%}
+    do 2
+ {%else %}
+    do3
+ {%endif%}
+'if' tag to set conditional matter.
+
+
+#use inheritance at html files to make code shorter.
+make a folder named'templates' at main djagnofile
+then make a file named 'base.html' or other name...
+write base html code.
+then use {% block block_name %} default data{% endblock block_name %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
