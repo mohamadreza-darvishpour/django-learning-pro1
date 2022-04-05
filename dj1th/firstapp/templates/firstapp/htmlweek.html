@@ -9,8 +9,8 @@
 
 {% block body %}
     <!-- using template tags not built in filter.-->
-    {% include 'includes/header_bar.html' %}
-    <p></p>
+    {% include 'includes/header_bar.html' with dayinfo='7days at htmlweek' %}
+    <p>$$$$$$$$${{dayinfo}}$$$$$$$$$$$$</p>
     {% for item in week %}
         <span>
        <a href= {%url 'the-day'  item  %}>    it's {{item}} </a>

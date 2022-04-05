@@ -164,10 +164,10 @@ go where you want to use the 'includes'file contains and write an include tag in
 we can use special part of htmlfile at include tag but yet i don't learn it ..
 ***if we don't use render to send dictionary of informations we can't use dtl type of variables 
 at the include tag.
-
-
-
-
+#use given data at main page and sign it at html includes file
+sign the vari at include tag .e.g but use it at includes_file.htmls
+{% include 'includes/file.html' with vari_sign_here_use_in_main_html="7days at cheers.html" %}
+use the variable by {{vari_at_mainhtml_sign_at_includes_file}}
 
 
 
