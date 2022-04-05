@@ -147,7 +147,51 @@ or
 make a folder named'templates' at main djagnofile
 then make a file named 'base.html' or other name...
 write base html code.
-then use {% block block_name %} default data{% endblock block_name %}
+then use {% block block_name %} default data{% endblock block_name %} at 'base.html'file
+#how to use it in other html file
+{% extends '../../../or_path_of_base.html' %} or {% extends 'name_of_base.html' %} ###
+***but if you want to use the direct name of 'name_of_base.html' you should add the 
+newtemplats folder PATH in the settings at templates part
+*it reuse the base.html file.
+
+
+
+#how do i use the  include tag 
+make a folder named includes at one of templates folder
+then make a html file you want to reuse at another htmlfiles
+go where you want to use the 'includes'file contains and write an include tag in this way:
+{% include 'written_file_at_includesfile_PATH.html' %} # it run the lines you write at that file.
+we can use special part of htmlfile at include tag but yet i don't learn it ..
+***if we don't use render to send dictionary of informations we can't use dtl type of variables 
+at the include tag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

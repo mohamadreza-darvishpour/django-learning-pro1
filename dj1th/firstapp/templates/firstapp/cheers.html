@@ -2,11 +2,17 @@
 
 
  {% block headblock %}
+ {% include 'includes/header_bar.html' %}
  <span>Document</span>
  {% endblock  %}
 
 
 {%block body%}
+<header>
+    <nav>
+        <a href="htmlweekdlfj"> days of week</a>
+    </nav>
+</header>
    <h1> inheritence in templates are working..</h1>
 
     <h3> good move...</h3>
@@ -14,3 +20,4 @@
     <span>{{daydata | title}} is exception.</span>   <!-- title is built in filter.-->
     {%endif%}
 {%endblock%}
+

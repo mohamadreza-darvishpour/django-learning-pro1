@@ -1,12 +1,16 @@
+
+
+
 {% extends 'base.html' %}
 
 {% block headblock %}
-Document
+<p>Document</p>
 {% endblock headblock %}
 
 {% block body %}
     <!-- using template tags not built in filter.-->
- 
+    {% include 'includes/header_bar.html' %}
+    <p></p>
     {% for item in week %}
         <span>
        <a href= {%url 'the-day'  item  %}>    it's {{item}} </a>
