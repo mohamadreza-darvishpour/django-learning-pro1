@@ -171,6 +171,42 @@ sign the vari at include tag .e.g but use it at includes_file.htmls
 use the variable by {{vari_at_mainhtml_sign_at_includes_file}}
 
 
+#make 404  not found page
+make 404.html file in the templates folder using extends and block tags of base.html
+in views.py use 
+from django.template.loader import render_to_string   #to change html file to pure string
+from django.http import HttpResponseNotFound    #to send a html page
+vari1 = render_to_string('path/404.html')   #change 404.htlm to string
+return HttpResponseNotFound(vari1)           #return vari1 to page 
+#or you can go another way
+from django.http import Http404
+raise Http404()                  #automatically send 404.html file at templates or  automatic not found error page
+notice*******:use ''''raise''''' not return _and you can make 404.html or not to used by http404()
+
+
+###########**django is MVT STRUCTURED means model.view.template
+
+
+
+#static files 
+first make 2 folders into eachother at your 'app_path'
+make  'app_path/static/app_path_name/appname.css'      #.e.g: we have a example static file like appname.css at the path of static files 
+then control 2 parameters at main settings.py 
+one: at INSTALLED_APPs part the 'django.contrib.statics' has been should to be     #make sure statics part of django run
+two; at  STATIC_URL= '/static/'  has been should to be as a static file path.       #make sure path of static file signed at the settings.py
+* good move 
+so now to use static files like css files we should write a special tag above the file 
+we want to use the statuc files in it  the tag is :::
+{% load static %}                                               #to remind we want to use static files.
+then to use the css file we need to make a html tag that is ::
+<link rel="stylesheet"  href = "{% static 'appname_path/appname.css'%}"   #notice: use a static tag to sign it and for all static file at html we need <link> tag.
+then we write changes at appname.css file and it must run.
+.........it's done rightly..............
+
+
+
+
+
 
 
 

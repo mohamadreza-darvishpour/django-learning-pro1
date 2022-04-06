@@ -45,11 +45,6 @@ def test3(request,tx2):
     if tx2 in days.keys():
         reply_mes=f'<h3>{tx2}->day   {days[tx2]}->data</h3>'
         return HttpResponse(reply_mes)
-    #**************************
-    #raise Http404()
-    elif tx2 not in days.keys():
-        from django.http import Http404
-        raise Http404()
     #*************************
     #404 not found by the below
     elif tx2 not in days.keys():
@@ -57,6 +52,12 @@ def test3(request,tx2):
         from django.http import HttpResponseNotFound
         info_404 = render_to_string('404.html')
         return HttpResponseNotFound(info_404)
+    #**************************
+    #raise Http404()
+    elif tx2 not in days.keys():
+        from django.http import Http404
+        raise Http404()   #it go to templates and find a 404.html file if is not automatically send its own 
+
     else:
         return HttpResponseNotFound(f'{tx2} is not a weekdays but has been seen here.')
 
