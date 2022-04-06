@@ -45,6 +45,13 @@ def test3(request,tx2):
     if tx2 in days.keys():
         reply_mes=f'<h3>{tx2}->day   {days[tx2]}->data</h3>'
         return HttpResponse(reply_mes)
+    #**************************
+    #raise Http404()
+    elif tx2 not in days.keys():
+        from django.http import Http404
+        raise Http404()
+    #*************************
+    #404 not found by the below
     elif tx2 not in days.keys():
         from django.template.loader  import render_to_string
         from django.http import HttpResponseNotFound
