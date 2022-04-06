@@ -205,6 +205,26 @@ then we write changes at appname.css file and it must run.
 
 
 
+#use static files at main part of django
+make 'static' folder at main part of app beside manage.py and db.sqlite3
+make css file .e.g  style.css
+and do changes in it .e.g  add new font of google
+you need to add new thing in your main 'settings.py':::
+STATICFILES_DIRS = [
+BASE_DIR / "main_static_path_name" ,
+]                                                #it cause to find the main static files at "main_static_path_name" files
+then make a <link rel=? href=?> tag at the file you want to do changes of static files in it 
+####
+
+
+
+ 
+
+
+
+
+
+
 
 
 
