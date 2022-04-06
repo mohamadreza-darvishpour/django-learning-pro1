@@ -166,6 +166,7 @@ we can use special part of htmlfile at include tag but yet i don't learn it ..
 at the include tag.
 #use given data at main page and sign it at html includes file
 sign the vari at include tag .e.g but use it at includes_file.htmls
+###use it ...
 {% include 'includes/file.html' with vari_sign_here_use_in_main_html="7days at cheers.html" %}
 use the variable by {{vari_at_mainhtml_sign_at_includes_file}}
 

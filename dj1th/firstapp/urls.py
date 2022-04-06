@@ -13,7 +13,7 @@ urlpatterns=[
     path("htmlweek<tx8>",views.html_week),
     path("cheer<tx7>",views.cheer_html),
     path("",views.empty_page),
-    path("mame<str:tx6>",views.html_page),
-    path("<int:tx2>",views.test2),
+#    path("mame<str:tx6>",views.html_page),
+#    path("<int:tx2>",views.test2),
     path("<str:tx2>",views.test3,name='the-day'),
 ] 

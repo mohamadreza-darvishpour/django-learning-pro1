@@ -31,7 +31,7 @@ days_by_num=list(days.keys())  #make a list of weekdays.
 from django.http import HttpResponseNotFound
 from django.http import HttpResponseRedirect
 
-
+'''
 def test2(request,tx2):
     if int(tx2)<1  or int(tx2)>len(days_by_num):
         print("test2.one")
@@ -39,22 +39,25 @@ def test2(request,tx2):
     else:
         print("test2.two")
         return HttpResponseRedirect(f'{days_by_num[int(tx2-1)]}')
-
-
+'''
+#use not found and 404response
 def test3(request,tx2):
     if tx2 in days.keys():
-        print("test3.three")
         reply_mes=f'<h3>{tx2}->day   {days[tx2]}->data</h3>'
         return HttpResponse(reply_mes)
+    elif tx2 not in days.keys():
+        from django.template.loader  import render_to_string
+        from django.http import HttpResponseNotFound
+        info_404 = render_to_string('404.html')
+        return HttpResponseNotFound(info_404)
     else:
-        print("test3.four")
         return HttpResponseNotFound(f'{tx2} is not a weekdays but has been seen here.')
 
 #use html code at response
-def html_page(request,tx6):
+'''def html_page(request,tx6):
     html_part = f'<h3> {tx6} will come after mame.joon</h3>'
     return HttpResponse(html_part)
-
+'''
 from django.urls import reverse
 def empty_page(request):
     data_html=''
@@ -98,7 +101,7 @@ def cheer_html(request,tx7 ):
     }
     return render(request,'firstapp/cheers.html',day_dict)
 
-
+ 
 #use template tags
 def html_week(request,tx8):
     week_list = list(days.keys())
