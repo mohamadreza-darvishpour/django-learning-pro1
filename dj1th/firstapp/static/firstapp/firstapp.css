@@ -1,3 +1,10 @@
 a{
-    border:10px groove yellowgreen
+    border:none;
+    margin: 2rem auto;
+    width: 70%;
+    max-width: 20rem;
+    box-shadow: 0 2px 8px rgba(28, 218, 224, 0.5);
+    padding: 1.5rem;
+    border-radius: 3px
+
 }

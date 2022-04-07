@@ -1,0 +1,47 @@
+ul  {
+    list-style:none;
+    border:none;
+    margin: 2rem auto;
+    width: 70%;
+    max-width: 20rem;
+    box-shadow: 0 2px 8px rgba(28, 218, 224, 0.5);
+    padding: 1.5rem;
+    border-radius: 3px
+
+}
+
+li{
+    margin:1rem 0;
+    text-align:center;
+    font-size: .5rem;
+    border-bottom:2px solid rgb(165, 224, 47);
+    padding-bottom:1rem;
+}
+
+li:last-child {
+    border-bottom:2px solid burlywood;
+}
+
+
+li a{
+    text-decoration: none;
+    color:rgb(243, 43, 216)
+}
+
+li a:hover{
+    color:rgb(59, 231, 24);
+    transition:all ease .3s ;
+
+}
+
+li a:active{
+    color:brown;
+    transition:.1 ;
+
+}
+
+
+p,
+span{
+    text-align:center;
+}

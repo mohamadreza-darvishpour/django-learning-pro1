@@ -1,17 +1,23 @@
+
  
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap');
 html {
     font-family: 'Open Sans', sans-serif;
+    color:blueviolet;
+}
+
+span {
+    background-color: rgb(195, 195, 212);
+    margin:auto;
+    border:2px rgb(30, 179, 11) groove;
 }
 
 
-
-
-
-
-
-
-
+body {
+    margin:auto;
+    background-color: rgb(252, 238, 41);
+    text-align:center;
+}
 
 
 

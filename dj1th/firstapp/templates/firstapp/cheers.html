@@ -2,23 +2,25 @@
 {%load static %}
 
  {% block headblock %}
- <link rel="stylesheet" href="{% static 'firstapp/firstapp.css'%}" >
- {% include 'includes/header_bar.html' with dayinfo="7days at cheers.html" %}
- <p>Document and$$$$$$$$$$ {{dayinfo}}$$$$$$$$$</p>
+    <link rel="stylesheet" href="{% static 'firstapp/firstapp.css'%}" >
+    <link rel="stylesheet" href="{% static 'firstapp/firstapp2.css'%}">
+ 
+
+    {% include 'includes/header_bar.html' with dayinfo="7days at cheers.html" %}
+    <p>Document and$$$ {{dayinfo}}$$$</p>
  {% endblock  %}
 
 
 {%block body%}
-<header>
-    <nav>
-        <a href="htmlweekdlfj"> days of week</a>
-    </nav>
-</header>
-   <h1> inheritence in templates are working..</h1>
-
-    <h3> good move...</h3>
-    {%if daydata is not None%}
-    <span>{{daydata | title}} is exception.</span>   <!-- title is built in filter.-->
-    {%endif%}
+    <header>
+        <nav>
+            <a href="htmlweekdlfj"> days of week</a>
+        </nav>
+    </header>
+        <h1> inheritence in templates are working..</h1>
+        <h3> good move...</h3>
+        {%if daydata is not None%}
+            <span>{{daydata | title}} is exception.</span>   <!-- title is built in filter.-->
+        {%endif%}
 {%endblock%}
 

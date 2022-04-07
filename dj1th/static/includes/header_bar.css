@@ -1,0 +1,18 @@
+header{
+    width:auto;
+    height:5rem;
+    background-color: burlywood;
+}
+
+header a {
+    color:white;
+    font-size:1rem;
+    font-weight:lighter;
+    text-decoration:none;
+    background-color: rgb(255, 180, 245);
+    width:auto;
+    height:auto;
+    display:flex;
+    justify-content:    center;
+    align-content: center;
+}

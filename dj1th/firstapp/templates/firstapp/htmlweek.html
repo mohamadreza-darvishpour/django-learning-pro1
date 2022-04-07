@@ -1,23 +1,25 @@
-
-
-
 {% extends 'base.html' %}
+{%load static %}
+
 
 {% block headblock %}
-<p>Document</p>
+    <p>Document</p>
+    <link rel="stylesheet" href="{% static 'firstapp/firstapp2.css'%}">
+
+
+
 {% endblock headblock %}
 
 {% block body %}
     <!-- using template tags not built in filter.-->
     {% include 'includes/header_bar.html' with dayinfo='7days at htmlweek' %}
     <p>$$$$$$$$${{dayinfo}}$$$$$$$$$$$$</p>
-    {% for item in week %}
-        <span>
-       <a href= {%url 'the-day'  item  %}>    it's {{item}} </a>
-        </span>
-        <div>_____</div>
-
-    {% endfor %}
-   
-    <h4>and end.</h4>
+    <ul>
+        {% for item in week %}
+                <li>    
+                    <a href= {%url 'the-day'  item  %}>    it's {{item}} </a>
+                </li>
+        {% endfor %}
+    </ul>
+    <h3>and end.</h3>
 {% endblock body %}

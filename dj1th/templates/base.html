@@ -8,12 +8,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% block headblock %}
-            default headblock
-    {% endblock  %}
     <link  rel="stylesheet"  href="{%static "style.css"%}" >
+    <link  rel="stylesheet"  href="{%static "includes/header_bar.css"%}" >
+
+    {% block headblock %}
+          <link  rel="stylesheet"  href="{%static "style.css"%}" >
+            default headblock
+        
+    {% endblock  %}
+   
 </head>
 <body>
+    <span>relation between base.html and style.css works testically</span>
     {% block body %}
        default body argument
     {% endblock body %}
@@ -21,3 +27,4 @@
     
 </body>
 </html>
+
